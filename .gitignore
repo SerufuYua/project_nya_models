@@ -1,0 +1,10 @@
+.~*
+*.ini
+*.res
+*.bat
+*.txt
+*.7z
+*.blend[0-9]
+renders
+refer
+export*
