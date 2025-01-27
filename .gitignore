@@ -6,5 +6,6 @@
 *.7z
 *.blend[0-9]
 renders
+old
 refer
 export*
