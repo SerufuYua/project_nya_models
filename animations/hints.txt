@@ -1,0 +1,3 @@
+first bake inserter, then girl
+
+after bake, set to all bones in all armatures in first frame key (pos, rot, scl)
