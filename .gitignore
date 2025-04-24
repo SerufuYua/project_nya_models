@@ -5,6 +5,7 @@
 *.7z
 *.blend[0-9]
 renders
+test
 old
 refer
 export*
