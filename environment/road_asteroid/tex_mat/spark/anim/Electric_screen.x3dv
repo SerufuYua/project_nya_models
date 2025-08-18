@@ -1,0 +1,137 @@
+#X3D V3.2 utf8
+PROFILE Interchange
+
+DEF TeapotTestBG Transform
+{
+  translation 3 0 -10
+  scale 20 20 20
+  children
+  [
+     DEF ME_Mesh Group
+     {
+       children
+       [
+         Shape
+         {
+	   appearance Appearance
+           {
+             material DEF MA_Material_001 Material
+             {
+	       diffuseColor 0.8 0.8 1
+	       ambientIntensity 0.1666667
+	       specularColor 0.4012008 0.4012008 0.4012008
+	       emissiveColor  0.0 0.0 0.0
+	       shininess 0.0976563
+               transparency 0
+	     }
+	   }
+	 geometry DEF Teapot_IFS Teapot { size 0.5 0.5 0.5 }
+	 }
+       ]
+     }
+  ]
+}
+
+DEF Electric_screen1 Transform
+{
+  translation 0 0 0
+  scale 1.5 1.5 1
+  rotation 1 0 0 0
+  children Shape
+  {
+    appearance Appearance
+    {
+      shaders CommonSurfaceShader
+      {
+        multiDiffuseAlphaTexture MovieTexture
+        {
+          url "electricity@counter(4).png"
+          loop TRUE
+          speed 0.3
+        }
+        specularFactor 0 0 0
+      }
+      material Material { transparency 0.5 }
+      textureTransform TextureTransform { scale 2 2 }
+      blendMode BlendMode
+      {
+        srcFactor "CONSTANT_COLOR"
+        destFactor "ONE"
+        colorTransparency 0.9
+      }
+    }
+    geometry Plane { }
+  }
+}
+
+
+DEF Electric_screen2 Transform
+{
+  translation 3 0 0
+  scale 1.5 1.5 1
+  rotation 1 0 0 0
+  children Shape
+  {
+    appearance Appearance
+    {
+      texture MultiTexture
+      {
+        mode [ "MODULATE", "ADD" ]
+        texture [
+          ImageTexture
+          {
+            url "electricity.png"
+            repeatS TRUE
+            repeatT TRUE
+          }
+          MovieTexture
+          {
+            url "electricity@counter(4).png"
+            repeatS FALSE
+            repeatT FALSE
+            loop TRUE
+            speed 0.3
+          }
+        ]
+      }
+      material Material { transparency 0.5 }
+      textureTransform TextureTransform { scale 2 2 }
+      blendMode BlendMode
+      {
+        srcFactor "CONSTANT_COLOR"
+        destFactor "ONE"
+        colorTransparency 0.9
+      }
+    }
+    geometry Plane { }
+  }
+}
+
+
+DEF Electric_screen3 Transform
+{
+  translation 6 0 0
+  scale 1.5 1.5 1
+  rotation 1 0 0 0
+  children Shape
+  {
+    appearance Appearance
+    {
+      texture MovieTexture
+      {
+        url "electricity@counter(4).png"
+        loop TRUE
+        speed 0.3
+      }
+      material Material { transparency 0.5 }
+      textureTransform TextureTransform { scale 2 2 }
+      blendMode BlendMode
+      {
+        srcFactor "CONSTANT_COLOR"
+        destFactor "ONE"
+        colorTransparency 0.9
+      }
+    }
+    geometry Plane { }
+  }
+}
