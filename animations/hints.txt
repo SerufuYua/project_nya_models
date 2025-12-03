@@ -1,3 +1,5 @@
 first bake inserter, then girl
 
 after bake, set to all bones in all armatures in first frame key (pos, rot, scl)
+
+to enable Wiggle 2 for hair need to enable It in source .blend file and file with animation BOTH
